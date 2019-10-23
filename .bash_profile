@@ -18,6 +18,7 @@ fi
 case $machine_role in
   work)
     export GIT_AUTHOR_EMAIL='jason.walker@welltok.com'
+    git config --global user.signingkey 1B1DCCAD2A0F1EF7
     ;;
   *)
     export GIT_AUTHOR_EMAIL='ragin.jason@me.com'
