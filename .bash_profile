@@ -6,12 +6,33 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='ls -G'
 
 export GREP_OPTIONS='--color=auto'
-export PS1="$(~/.bash_prompt) "
+PS1="$(~/.bash_prompt) "
+export PS1
 
-if [ -e ~/.bash_profile_local ]; then
-  source ~/.bash_profile_local
+if grep -q -s Welltok /etc/motd; then
+  machine_role='work'
+else
+  machine_role='home'
 fi
 
-for f in ~/.bash_completion.d/*; do
+case $machine_role in
+  work)
+    export GIT_AUTHOR_EMAIL='jason.walker@welltok.com'
+    ;;
+  *)
+    export GIT_AUTHOR_EMAIL='ragin.jason@me.com'
+    ;;
+esac
+
+GIT_AUTHOR_NAME="$(id -F)"
+export GIT_AUTHOR_NAME
+export GIT_COMMITTER_EMAIL="${GIT_AUTHOR_EMAIL}"
+export GIT_COMMITTER_NAME="${GIT_AUTHOR_NAME}"
+
+if [ -e "${HOME}"/.bash_profile_local ]; then
+  source "${HOME}"/.bash_profile_local
+fi
+
+for f in "${HOME}"/.bash_completion.d/*; do
   source "${f}"
 done
