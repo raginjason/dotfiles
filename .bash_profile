@@ -1,5 +1,7 @@
 # OSX considers all terminals login shells
 
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # OSX color ls
 alias ls='ls -G'
 
