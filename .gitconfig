@@ -1,0 +1,24 @@
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = store
+[commit]
+	template = ~/.stCommitMsg
+[rerere]
+	enabled = true
+[gpg]
+	program = gpg2
+[user]
+	signingkey = 1B1DCCAD2A0F1EF7
