@@ -9,5 +9,6 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 dotfiles config --local commit.gpgsign true
 dotfiles config --local gpg.program gpg2
+dotfiles push --set-upstream origin master
 
 source: https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
