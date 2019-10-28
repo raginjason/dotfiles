@@ -22,13 +22,11 @@ case $machine_role in
     ;;
   *)
     export GIT_AUTHOR_EMAIL='ragin.jason@me.com'
+    git config --global user.signingkey 349DD25F
     ;;
 esac
 
-GIT_AUTHOR_NAME="$(id -F)"
-export GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL="${GIT_AUTHOR_EMAIL}"
-export GIT_COMMITTER_NAME="${GIT_AUTHOR_NAME}"
 
 if [ -e "${HOME}"/.bash_profile_local ]; then
   source "${HOME}"/.bash_profile_local
