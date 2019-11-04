@@ -28,6 +28,10 @@ esac
 
 export GIT_COMMITTER_EMAIL="${GIT_AUTHOR_EMAIL}"
 
+if [ -e '/usr/local/scala-2.13.1/bin' ]; then
+  export PATH="${PATH}":'/usr/local/scala-2.13.1/bin'
+fi
+
 if [ -e "${HOME}"/.bash_profile_local ]; then
   source "${HOME}"/.bash_profile_local
 fi
