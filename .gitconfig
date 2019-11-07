@@ -22,5 +22,5 @@
 [gpg]
 	program = gpg2
 [user]
-	signingkey = 1B1DCCAD2A0F1EF7
+	signingkey = 349DD25F
 	name = Jason Walker
