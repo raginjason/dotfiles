@@ -28,8 +28,8 @@ esac
 
 export GIT_COMMITTER_EMAIL="${GIT_AUTHOR_EMAIL}"
 
-if [ -e '/usr/local/scala-2.13.1/bin' ]; then
-  export PATH="${PATH}":'/usr/local/scala-2.13.1/bin'
+if [ -e '/usr/local/scala-2.11.12/bin' ]; then
+  export PATH="${PATH}":'/usr/local/scala-2.11.12/bin'
 fi
 
 if [ -e '/usr/local/apache-ant-1.10.7/bin' ]; then
