@@ -9,7 +9,7 @@ export GREP_OPTIONS='--color=auto'
 PS1="$(~/.bash_prompt) "
 export PS1
 
-if grep -q -s Welltok /etc/motd; then
+if [ "${LOGNAME}" == 'wofxxff' ]; then
   machine_role='work'
 else
   machine_role='home'
@@ -17,8 +17,8 @@ fi
 
 case $machine_role in
   work)
-    export GIT_AUTHOR_EMAIL='jason.walker@welltok.com'
-    git config --global user.signingkey 1B1DCCAD2A0F1EF7
+    export GIT_AUTHOR_EMAIL='jason.walker@onedatascan.com'
+    git config --global user.signingkey 415E782E
     ;;
   *)
     export GIT_AUTHOR_EMAIL='ragin.jason@me.com'
