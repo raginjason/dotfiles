@@ -40,6 +40,10 @@ if [ -e '/usr/local/apache-ant-1.10.7/bin' ]; then
   export PATH="${PATH}":'/usr/local/apache-ant-1.10.7/bin'
 fi
 
+if [ -e "${HOME}/dev/homebrew/bin" ]; then
+  export PATH="${PATH}":"${HOME}/dev/homebrew/bin"
+fi
+
 if [ -e "${HOME}"/.bash_profile_local ]; then
   source "${HOME}"/.bash_profile_local
 fi
