@@ -40,6 +40,10 @@ if [ -e '/usr/local/apache-ant-1.10.7/bin' ]; then
   export PATH="${PATH}":'/usr/local/apache-ant-1.10.7/bin'
 fi
 
+if [ -e "${HOME}"/Library/Python/3.7/bin ]; then
+  export PATH="${PATH}":"${HOME}"/Library/Python/3.7/bin
+fi
+
 if [ -e "${HOME}"/dev/homebrew/bin ]; then
   export PATH="${PATH}":"${HOME}"/dev/homebrew/bin
   if [ -e "${HOME}"/dev/homebrew/etc/bash_completion.d ]; then
