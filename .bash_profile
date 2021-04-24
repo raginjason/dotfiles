@@ -53,6 +53,10 @@ if [ -e "${HOME}"/dev/homebrew/bin ]; then
   fi
 fi
 
+if [ -e "${HOME}"/go/bin ]; then
+  export PATH="${PATH}":"${HOME}"/go/bin
+fi
+
 if [ -e "${HOME}"/.bash_profile_local ]; then
   source "${HOME}"/.bash_profile_local
 fi
