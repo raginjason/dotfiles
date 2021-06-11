@@ -40,8 +40,8 @@ if [ -e '/usr/local/apache-ant-1.10.7/bin' ]; then
   export PATH="${PATH}":'/usr/local/apache-ant-1.10.7/bin'
 fi
 
-if [ -e "${HOME}"/Library/Python/3.7/bin ]; then
-  export PATH="${PATH}":"${HOME}"/Library/Python/3.7/bin
+if [ -e "$(python3 -m site --user-base)"/bin ]; then
+  export PATH="${PATH}":"$(python3 -m site --user-base)"/bin
 fi
 
 if [ -e "${HOME}"/dev/homebrew/bin ]; then
