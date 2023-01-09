@@ -2,8 +2,12 @@
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# OSX color ls
-alias ls='ls -G'
+# OSX/BSD color ls
+export CLICOLOR=1
+
+# Default OSX/BSD colors are exfxcxdxbxegedabagacad
+# Change dirs to bold cyan so they show better on dark backgrounds
+export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 export GREP_OPTIONS='--color=auto'
 PS1="$(~/.bash_prompt) "
