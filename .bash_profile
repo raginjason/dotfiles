@@ -69,3 +69,4 @@ for f in "${HOME}"/.bash_completion.d/*; do
   source "${f}"
 done
 
+alias assume="source assume"
