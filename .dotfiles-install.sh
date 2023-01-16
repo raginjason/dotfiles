@@ -3,7 +3,7 @@
 # Assume this is run from the current directory
 dotfiles_dir="${PWD}"
 
-for f in .bash_profile .bashrc .gitconfig .ideavimrc .inputrc .vimrc .zshenv .zshrc; do
+for f in .bash_profile .bash_prompt .bashrc .gitconfig .ideavimrc .inputrc .vimrc .zshenv .zshrc; do
   (cd "${HOME}" && ln -sf "${dotfiles_dir}"/"${f}" "${f}")
 done
 
