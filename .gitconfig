@@ -5,7 +5,7 @@
 [push]
 	default = simple
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/jason.walker/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -22,7 +22,7 @@
 [gpg]
 	program = gpg2
 [user]
-	signingkey = 349DD25F
+	signingkey = D39AF0B2
 	name = Jason Walker
 [alias]
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'

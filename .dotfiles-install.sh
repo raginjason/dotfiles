@@ -2,6 +2,8 @@
 
 echo "running dotfile install"
 
+printenv
+
 for f in .gitconfig .ideavimrc .inputrc .vimrc .zshenv .zshrc; do
   ln -s "${f}" "${HOME}"/"${f}"
 done
