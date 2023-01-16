@@ -1,11 +1,10 @@
 #!/bin/sh
 
-echo "running dotfile install"
-
-printenv
+# Assume this is run from the current directory
+dotfiles_dir="${PWD}"
 
 for f in .gitconfig .ideavimrc .inputrc .vimrc .zshenv .zshrc; do
-  ln -s "${f}" "${HOME}"/"${f}"
+  (cd "${HOME}" && ln -s "${dotfiles_dir}"/"${f}" "${f}")
 done
 
 # Work
