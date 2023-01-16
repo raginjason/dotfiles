@@ -1,3 +1,4 @@
+echo "running .bash_profile" >> bash.log
 # OSX considers all terminals login shells
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
