@@ -65,8 +65,10 @@ if [ -e "${HOME}"/.bash_profile_local ]; then
   source "${HOME}"/.bash_profile_local
 fi
 
-for f in "${HOME}"/.bash_completion.d/*; do
-  source "${f}"
-done
+if [ -e "${HOME}"/.bash_completion.d ]; then
+  for f in "${HOME}"/.bash_completion.d/*; do
+    source "${f}"
+  done
+fi
 
 alias assume="source assume"
