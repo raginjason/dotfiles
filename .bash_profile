@@ -13,7 +13,7 @@ export GREP_OPTIONS='--color=auto'
 PS1="$(~/.bash_prompt) "
 export PS1
 
-if [ "${LOGNAME}" == 'wofxxff' ]; then
+if [[ "${LOGNAME}" == 'jason.walker' ]]; then
   machine_role='work'
 else
   machine_role='home'
