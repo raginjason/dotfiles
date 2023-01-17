@@ -13,25 +13,6 @@ export GREP_OPTIONS='--color=auto'
 PS1="$(~/.bash_prompt) "
 export PS1
 
-if [[ "${LOGNAME}" == 'jason.walker' ]]; then
-  machine_role='work'
-else
-  machine_role='home'
-fi
-
-case $machine_role in
-  work)
-    export GIT_AUTHOR_EMAIL='jason.walker@onedatascan.com'
-    git config --global user.signingkey D39AF0B2
-    ;;
-  *)
-    export GIT_AUTHOR_EMAIL='ragin.jason@me.com'
-    git config --global user.signingkey 349DD25F
-    ;;
-esac
-
-export GIT_COMMITTER_EMAIL="${GIT_AUTHOR_EMAIL}"
-
 if [ -e '/usr/local/scala-2.11.12/bin' ]; then
   export PATH="${PATH}":'/usr/local/scala-2.11.12/bin'
 fi
@@ -63,6 +44,10 @@ fi
 
 if [ -e "${HOME}"/.bash_profile_local ]; then
   source "${HOME}"/.bash_profile_local
+fi
+
+if [ -e "${HOME}"/.shell_variables ]; then
+  source "${HOME}"/.shell_variables
 fi
 
 if [ -e "${HOME}"/.bash_completion.d ]; then

@@ -1,0 +1,6 @@
+{
+    "workbench.startupEditor": "none",
+    "dotfiles.repository": "file:///Users/jason.walker/dev/dotfiles",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "dotfiles.installCommand": "bootstrap-datascan.sh"
+}
