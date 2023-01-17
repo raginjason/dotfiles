@@ -1,6 +1,6 @@
 {
     "workbench.startupEditor": "none",
-    "dotfiles.repository": "file:///Users/jwalker/dev/dotfiles",
+    "dotfiles.repository": "https://github.com/raginjason/dotfiles.git",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "dotfiles.installCommand": "bootstrap-personal.sh"
 }
