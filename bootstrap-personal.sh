@@ -1,14 +1,15 @@
 #!/bin/sh
 
+dotfiles_home=`dirname $0`
 machine_role='personal'
 
 git config --global user.signingkey 349DD25F
 
 case "${OSTYPE}" in
   "darwin"*)
-    ./bootstrap-darwin.sh "${machine_role}"
+    "${dotfiles_home}"/bootstrap-darwin.sh "${machine_role}"
   ;;
   "linux"*)
-    ./bootstrap-linux.sh "${machine_role}"
+    "${dotfiles_home}"/bootstrap-linux.sh "${machine_role}"
   ;;
 esac
