@@ -1,7 +1,7 @@
 #!/bin/sh
 
 machine_role="$1"
-dotfiles_home=`dirname $0`
+dotfiles_home=$(realpath $(dirname $0))
 
 # Key repeat in VSCode vim
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
