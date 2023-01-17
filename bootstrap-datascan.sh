@@ -5,11 +5,11 @@ machine_role='datascan'
 
 git config --global user.signingkey D39AF0B2
 
-case "${OSTYPE}" in
-  "darwin"*)
+case $(uname | tr '[:upper:]' '[:lower:]') in
+  darwin*)
     "${dotfiles_home}"/bootstrap-darwin.sh "${machine_role}"
   ;;
-  "linux"*)
+  linux*)
     "${dotfiles_home}"/bootstrap-linux.sh "${machine_role}"
   ;;
 esac
