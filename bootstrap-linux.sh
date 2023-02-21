@@ -16,3 +16,5 @@ for f in .bash_profile .bash_prompt .bashrc .gitconfig .inputrc .vimrc .zshenv .
   fi
   (cd "${HOME}" && ln -nsf "${source_file}" "${f}")
 done
+
+code --install-extension vscodevim.vim
