@@ -3,6 +3,22 @@
 machine_role="$1"
 dotfiles_home=$(realpath $(dirname $0))
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+/opt/homebrew/bin/brew install awscli@2
+/opt/homebrew/bin/brew install --cask visual-studio-code
+/opt/homebrew/bin/brew install --cask sourcetree
+/opt/homebrew/bin/brew install --cask iterm2
+/opt/homebrew/bin/brew install --cask macvim
+/opt/homebrew/bin/brew install --cask gpg-suite
+/opt/homebrew/bin/brew install --cask slack
+/opt/homebrew/bin/brew install --cask macdown
+/opt/homebrew/bin/brew install --cask docker
+/opt/homebrew/bin/brew install --cask brave-browser
+/opt/homebrew/bin/brew tap common-fate/granted
+/opt/homebrew/bin/brew install granted
+/opt/homebrew/bin/brew install jq
+
 # Key repeat in VSCode vim
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
