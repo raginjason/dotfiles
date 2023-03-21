@@ -5,5 +5,7 @@
     "dotfiles.installCommand": "~/dotfiles/bootstrap-datascan.sh",
     "[python]": {
         "editor.formatOnType": true
-    }
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
 }
