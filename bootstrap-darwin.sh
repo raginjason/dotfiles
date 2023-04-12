@@ -15,6 +15,7 @@ dotfiles_home=$(realpath $(dirname $0))
 /opt/homebrew/bin/brew install --cask macdown
 /opt/homebrew/bin/brew install --cask docker
 /opt/homebrew/bin/brew install --cask brave-browser
+/opt/homebrew/bin/brew install --cask azure-data-studio
 /opt/homebrew/bin/brew tap common-fate/granted
 /opt/homebrew/bin/brew install granted
 /opt/homebrew/bin/brew install jq
