@@ -5,20 +5,20 @@ dotfiles_home=$(realpath $(dirname $0))
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-/opt/homebrew/bin/brew install awscli@2
-/opt/homebrew/bin/brew install --cask visual-studio-code
-/opt/homebrew/bin/brew install --cask sourcetree
-/opt/homebrew/bin/brew install --cask iterm2
-/opt/homebrew/bin/brew install --cask macvim
-/opt/homebrew/bin/brew install --cask gpg-suite
-/opt/homebrew/bin/brew install --cask slack
-/opt/homebrew/bin/brew install --cask macdown
-/opt/homebrew/bin/brew install --cask docker
-/opt/homebrew/bin/brew install --cask brave-browser
-/opt/homebrew/bin/brew install --cask azure-data-studio
-/opt/homebrew/bin/brew tap common-fate/granted
-/opt/homebrew/bin/brew install granted
-/opt/homebrew/bin/brew install jq
+/usr/local/bin/brew install awscli@2
+/usr/local/bin/brew install --cask visual-studio-code
+/usr/local/bin/brew install --cask sourcetree
+/usr/local/bin/brew install --cask iterm2
+/usr/local/bin/brew install --cask macvim
+/usr/local/bin/brew install --cask gpg-suite
+/usr/local/bin/brew install --cask slack
+/usr/local/bin/brew install --cask macdown
+/usr/local/bin/brew install --cask docker
+/usr/local/bin/brew install --cask brave-browser
+/usr/local/bin/brew install --cask azure-data-studio
+/usr/local/bin/brew tap common-fate/granted
+/usr/local/bin/brew install granted
+/usr/local/bin/brew install jq
 
 # Key repeat in VSCode vim
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
