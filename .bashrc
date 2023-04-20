@@ -2,12 +2,19 @@
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# OSX/BSD color ls
-export CLICOLOR=1
+case "${OSTYPE}" in
+  darwin*)
+    # OSX/BSD/Darwin color ls
+    export CLICOLOR=1
 
-# Default OSX/BSD colors are exfxcxdxbxegedabagacad
-# Change dirs to bold cyan so they show better on dark backgrounds
-export LSCOLORS='Exfxcxdxbxegedabagacad'
+    # Default OSX/BSD/Darwin colors are exfxcxdxbxegedabagacad
+    # Change dirs to bold cyan so they show better on dark backgrounds
+    export LSCOLORS='Exfxcxdxbxegedabagacad'
+    ;;
+  linux*)
+    alias ls='ls --color=auto'
+    ;;
+esac
 
 export GREP_OPTIONS='--color=auto'
 PS1="$(~/.bash_prompt) "
