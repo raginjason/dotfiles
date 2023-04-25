@@ -37,5 +37,7 @@ for f in .bash_profile .bash_prompt .bashrc .gitconfig .ideavimrc .inputrc .vimr
   (cd "${HOME}" && ln -nsf "${source_file}" "${f}")
 done
 
-code --force --install-extension vscodevim.vim
-code --force --install-extension streetsidesoftware.code-spell-checker
+if command -v code >/dev/null; then
+  code --force --install-extension vscodevim.vim
+  code --force --install-extension streetsidesoftware.code-spell-checker
+fi
