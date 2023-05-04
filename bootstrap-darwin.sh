@@ -41,3 +41,10 @@ if command -v code >/dev/null; then
   code --force --install-extension vscodevim.vim
   code --force --install-extension streetsidesoftware.code-spell-checker
 fi
+
+docker_etc=/Applications/Docker.app/Contents/Resources/etc
+if [ -e "${docker_etc}" ]; then
+  ln -sf "${docker_etc}"/docker.bash-completion "${HOME}"/.bash_completion.d/docker
+  ln -sf "${docker_etc}"/docker-compose.bash-completion "${HOME}"/.bash_completion.d/docker-compose
+fi
+

@@ -58,6 +58,7 @@ if [ -e "${HOME}"/.shell_variables ]; then
 fi
 
 if [ -e "${HOME}"/.bash_completion.d ]; then
+  export DOCKER_COMPLETION_SHOW_CONTAINER_IDS=yes
   for f in "${HOME}"/.bash_completion.d/*; do
     source "${f}"
   done
