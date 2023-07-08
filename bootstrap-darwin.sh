@@ -42,6 +42,10 @@ if command -v code >/dev/null; then
   code --force --install-extension streetsidesoftware.code-spell-checker
 fi
 
+if [ ! -e "${HOME}"/.bash_completion.d ]; then
+  mkdir "${HOME}"/.bash_completion.d
+fi
+
 docker_etc=/Applications/Docker.app/Contents/Resources/etc
 if [ -e "${docker_etc}" ]; then
   ln -sf "${docker_etc}"/docker.bash-completion "${HOME}"/.bash_completion.d/docker
