@@ -2,7 +2,7 @@
     "workbench.startupEditor": "none",
     "dotfiles.repository": "https://github.com/raginjason/dotfiles.git",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "dotfiles.installCommand": "~/dotfiles/bootstrap-datascan.sh",
+    "dotfiles.installCommand": "bootstrap-datascan.sh",
     "[python]": {
         "editor.formatOnType": true
     },
