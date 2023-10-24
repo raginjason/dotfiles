@@ -16,6 +16,8 @@ case "${OSTYPE}" in
     ;;
 esac
 
+HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S %z "
+
 export GREP_OPTIONS='--color=auto'
 PS1="$(~/.bash_prompt) "
 export PS1
