@@ -34,6 +34,10 @@ if [ -e '/usr/local/apache-ant-1.10.7/bin' ]; then
   export PATH="${PATH}":'/usr/local/apache-ant-1.10.7/bin'
 fi
 
+if [ -e '/Applications/Docker.app/Contents/Resources/bin' ]; then
+  export PATH="${PATH}":'/Applications/Docker.app/Contents/Resources/bin'
+fi
+
 if [ -e "$(python3 -m site --user-base)"/bin ]; then
   export PATH="${PATH}":"$(python3 -m site --user-base)"/bin
 fi
