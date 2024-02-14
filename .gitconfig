@@ -26,7 +26,7 @@
 	name = Jason Walker
 [alias]
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
-	local-prune = ! git branch --merged master | grep -Ev '(^\\*|master|main)' | xargs -n 1 git branch -d
+	local-prune = ! git branch --merged main | grep -Ev '(^\\*|master|main)' | xargs -n 1 git branch -d
 	diff-ws = diff -w -U0 --word-diff-regex=[^[:space:]]
 [pull]
 	rebase = true
