@@ -4,8 +4,8 @@ if [[ -e '/usr/local/Homebrew/bin' ]]; then
   export PATH="${PATH}":'/usr/local/Homebrew/bin'
 fi
 
-if [[ -e '/usr/local/Homebrew/bin' ]]; then
-  export PATH="${PATH}":'/usr/local/Homebrew/bin'
+if [[ -e '/opt/homebrew/bin' ]]; then
+  export PATH="${PATH}":'/opt/homebrew/bin'
 fi
 
 if [[ -e '/Applications/Docker.app/Contents/Resources/bin' ]]; then
