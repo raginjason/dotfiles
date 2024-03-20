@@ -4,8 +4,6 @@
         branch = auto
 [push]
 	default = simple
-[core]
-	excludesfile = /Users/jason.walker/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -21,14 +19,13 @@
 	enabled = true
 [gpg]
 	program = gpg2
-[user]
-	signingkey = D39AF0B2
-	name = Jason Walker
 [alias]
-	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
+       lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)%an <%ae>%Creset / %C(bold magenta)%cn <%ce>%Creset'
 	local-prune = ! git branch --merged main | grep -Ev '(^\\*|master|main)' | xargs -n 1 git branch -d
 	diff-ws = diff -w -U0 --word-diff-regex=[^[:space:]]
 [pull]
 	rebase = true
 [fetch]
 	prune = true
+[include]
+    path = .gitconfig.local

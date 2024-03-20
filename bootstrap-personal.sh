@@ -13,7 +13,6 @@ case $(uname | tr '[:upper:]' '[:lower:]') in
   ;;
 esac
 
-git config --global user.signingkey 349DD25F
 
 if command -v dolt >/dev/null; then
   dolt config --global --add user.email "${GIT_AUTHOR_EMAIL}"
