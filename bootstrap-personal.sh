@@ -6,6 +6,7 @@ machine_role='personal'
 case $(uname | tr '[:upper:]' '[:lower:]') in
   darwin*)
     "${dotfiles_home}"/bootstrap-darwin.sh "${machine_role}"
+    /opt/homebrew/bin/brew install --cask docker
   ;;
   linux*)
     "${dotfiles_home}"/bootstrap-linux.sh "${machine_role}"

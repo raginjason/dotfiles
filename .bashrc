@@ -71,3 +71,8 @@ if [ -e "${HOME}"/.bash_completion.d ]; then
 fi
 
 alias assume="source assume"
+
+if [ -e "${HOME}"/.rd/bin ]
+then
+  export PATH="${HOME}"/.rd/bin:"${PATH}"
+fi

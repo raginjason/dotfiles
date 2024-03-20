@@ -28,3 +28,7 @@ bindkey -v
 # https://granted.dev
 alias assume="source assume"
 
+if [ -e "${HOME}"/.rd/bin ]
+then
+  export PATH="${HOME}"/.rd/bin:"${PATH}"
+fi

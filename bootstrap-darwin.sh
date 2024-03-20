@@ -13,12 +13,12 @@ dotfiles_home=$(realpath $(dirname $0))
 /opt/homebrew/bin/brew install --cask gpg-suite
 /opt/homebrew/bin/brew install --cask slack
 /opt/homebrew/bin/brew install --cask macdown
-/opt/homebrew/bin/brew install --cask docker
 /opt/homebrew/bin/brew install --cask brave-browser
 /opt/homebrew/bin/brew install --cask azure-data-studio
 /opt/homebrew/bin/brew tap common-fate/granted
 /opt/homebrew/bin/brew install granted
 /opt/homebrew/bin/brew install jq
+/opt/homebrew/bin/brew install gh
 
 # Key repeat in VSCode vim
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
@@ -38,6 +38,7 @@ for f in .bash_profile .bash_prompt .bashrc .gitconfig .ideavimrc .inputrc .vimr
 done
 
 if command -v code >/dev/null; then
+# echo '{"http.proxyStrictSSL": false}' > /path/to/your/settings.json
   code --force --install-extension vscodevim.vim
   code --force --install-extension streetsidesoftware.code-spell-checker
 fi
