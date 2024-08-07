@@ -1,16 +1,27 @@
+# ragin jason's dotfiles
+
+## Design Considerations
+
+### devcontainers
+
+VS Code and and the devcontainer extension uses the following flow regarding `~/.gitconfig`:
+
+1. If there is no `~/.gitconfig` in the container, copy one in from the host
+2. Augment `~/.gitconfig` with credentials helper
+
+In the context of dotfiles management, this means either of the following work:
+
+* Do nothing and let VS Code copy the `~/.gitconfig` from your host OS into the container by virtue of it not previously existing in the container
+* Have your dotfiles process copy or create a complete `~/.gitconfig`
+
+In reality, the first option is likely the best place to start, as most or all of your `~/.gitconfig` settings that apply to the host should apply to the devcontiainer.
+
+## Usage
+
 Setup environment in a new computer
 
 ```
-git clone --bare https://github.com/raginjason/dotfiles.git "${HOME}"/.dotfiles
-
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-dotfiles checkout
-
-dotfiles config --local status.showUntrackedFiles no
-dotfiles config --local commit.gpgsign true
-dotfiles config --local gpg.program gpg2
-dotfiles push --set-upstream origin master
+git clone https://github.com/raginjason/dotfiles.git
+cd dotfiles
+./bootstrap-personal.sh # Or any other ./bootstrap-<machine role>.sh
 ```
-
-source: https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
