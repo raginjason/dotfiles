@@ -1,6 +1,8 @@
 {
-    "workbench.startupEditor": "none",
+    "dotfiles.installCommand": "bootstrap-personal.sh",
     "dotfiles.repository": "https://github.com/raginjason/dotfiles.git",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "dotfiles.installCommand": "bootstrap-personal.sh"
+    "workbench.startupEditor": "none"
 }
