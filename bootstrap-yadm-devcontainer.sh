@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -x
+echo "starting bootstrap"
+touch ~/i-was-here
 
 # Ensure yadm is installed
 if ! command -v yadm >/dev/null; then
