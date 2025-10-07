@@ -4,7 +4,7 @@
 
 ### devcontainers
 
-VS Code and and the devcontainer extension uses the following flow regarding `~/.gitconfig`:
+Assuming `"dev.containers.cacheVolume": true`, VS Code and and the devcontainer extension uses the following flow regarding `~/.gitconfig`:
 
 1. If there is no `~/.gitconfig` in the container, copy one in from the host
 2. Augment `~/.gitconfig` with credentials helper

@@ -1,6 +1,7 @@
 {
-    "dotfiles.installCommand": "bootstrap-personal.sh",
+    "dotfiles.installCommand": "bootstrap-yadm-devcontainer.sh",
     "dotfiles.repository": "https://github.com/raginjason/dotfiles.git",
+    "dotfiles.targetPath": "~/.local/share/yadm/repo.git",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,

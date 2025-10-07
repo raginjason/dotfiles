@@ -1,0 +1,8 @@
+Architecture: {{ yadm.arch }}
+Class (last): {{ yadm.class }}
+Classes (all): {{ yadm.classes }}
+Distribution: {{ yadm.distro }}
+Distribution Family: {{ yadm.distro_family }}
+Hostname: {{ yadm.hostname }}
+Operating System: {{ yadm.os }}
+Current User: {{ yadm.user }}
