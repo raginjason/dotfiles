@@ -6,9 +6,9 @@ dotfiles_home=$(realpath $(dirname $0))
 declare -a files
 
 if [ -f /.dockerenv ]; then
-  files+=(".bash_profile" ".bash_prompt" ".bashrc" ".inputrc" ".vimrc" ".zshenv" ".zshrc" ".shell_variables")
+  files+=(".bash_profile" ".bash_prompt" ".bashrc" ".inputrc" ".vimrc" ".zshenv" ".zshrc")
 else
-  files+=(".bash_profile" ".bash_prompt" ".bashrc" ".gitconfig" ".inputrc" ".vimrc" ".zshenv" ".zshrc" ".shell_variables")
+  files+=(".bash_profile" ".bash_prompt" ".bashrc" ".gitconfig" ".inputrc" ".vimrc" ".zshenv" ".zshrc")
   if command -v code >/dev/null; then
     code --force --install-extension vscodevim.vim
     code --force --install-extension streetsidesoftware.code-spell-checker
