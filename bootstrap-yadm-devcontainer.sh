@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # Ensure yadm is installed
 if ! command -v yadm >/dev/null; then
   if command -v brew >/dev/null; then
