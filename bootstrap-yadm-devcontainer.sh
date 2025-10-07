@@ -14,8 +14,7 @@ else
   echo "yadm is already installed"
 fi
 
-# VS Code clones a repo non-bare, but yadm wants something bare-ish...
+# VS Code clones the dotfiles repo on our behalf, but yadm wants to manage it
+# in its own way. No need to go over the network again, just tell yadm to clone
+# from the already checked-out git repo.
 yadm clone ~/dotfiles
-
-yadm alt
-yadm bootstrap
