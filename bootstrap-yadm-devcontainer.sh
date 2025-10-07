@@ -13,5 +13,8 @@ else
   echo "yadm is already installed"
 fi
 
+# VS Code clones a repo non-bare, but yadm wants bare...
+git clone --bare ~/dotfiles ~/.local/share/yadm/repo.git
+
 yadm alt
 yadm bootstrap
