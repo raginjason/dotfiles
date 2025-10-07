@@ -5,5 +5,10 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
 }
