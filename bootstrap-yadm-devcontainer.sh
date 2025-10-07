@@ -9,7 +9,7 @@ if ! command -v yadm >/dev/null; then
   if command -v brew >/dev/null; then
     brew install yadm
   elif command -v apt-get >/dev/null; then
-    sudo apt-get update && sudo apt-get install yadm
+    sudo apt-get update -qq && sudo apt-get install -y yadm -qq
   else
     echo "Unsupported yadm platform"
     exit
