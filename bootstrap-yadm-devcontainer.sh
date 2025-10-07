@@ -17,4 +17,4 @@ fi
 # VS Code clones the dotfiles repo on our behalf, but yadm wants to manage it
 # in its own way. No need to go over the network again, just tell yadm to clone
 # from the already checked-out git repo.
-yadm clone ~/dotfiles > ~/bootstrap-yadm-devcontainer.log 2>&1
+yadm clone ~/dotfiles >> ~/bootstrap-yadm-devcontainer.log 2>&1
