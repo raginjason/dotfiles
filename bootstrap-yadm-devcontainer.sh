@@ -18,3 +18,4 @@ fi
 # in its own way. No need to go over the network again, just tell yadm to clone
 # from the already checked-out git repo.
 #yadm clone ~/dotfiles >> ~/bootstrap-yadm-devcontainer.log 2>&1
+yadm clone -f ~/dotfiles 
