@@ -9,6 +9,7 @@ if ! command -v yadm >/dev/null; then
   else
     echo "Unsupported yadm platform"
     exit
+  fi
 else
   echo "yadm is already installed"
 fi
