@@ -7,5 +7,11 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
         }
+    },
+    "dev.containers.defaultFeatures": {
+        "ghcr.io/raginjason/features/yadm:1": {
+            "repositoryUrl": "https://github.com/raginjason/dotfiles.git",
+            "localClass": "{{ yadm.class }}"
+        }
     }
 }
