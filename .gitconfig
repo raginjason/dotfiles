@@ -4,8 +4,6 @@
         branch = auto
 [push]
 	default = simple
-[core]
-	excludesfile = /Users/jason.walker/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
