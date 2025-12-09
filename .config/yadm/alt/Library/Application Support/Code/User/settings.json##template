@@ -10,9 +10,10 @@
     },
     "dev.containers.copyGitConfig": false,
     "dev.containers.defaultFeatures": {
-        "ghcr.io/raginjason/features/yadm:1.0.1": {
+        "ghcr.io/raginjason/features/yadm": {
             "repositoryUrl": "https://github.com/raginjason/dotfiles.git",
-            "localClass": "{{ yadm.class }}"
+            "localClass": "{{ yadm.class }}",
+            "overwriteExisting": true
         }
     }
 }
