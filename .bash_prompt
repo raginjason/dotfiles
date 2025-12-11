@@ -52,20 +52,41 @@ PS1_PWD=$(pwd)
 $(echo $TTY| grep '[^0-9]' >/dev/null)
 IS_PTY=$?
 
+# Source git prompt script
+case "${OSTYPE}" in
+    linux*)
+        source /usr/lib/git-core/git-sh-prompt
+        ;;
+    darwin*)
+        source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+        ;;
+esac
+
+# Configure git prompt options (optional)
+export GIT_PS1_SHOWDIRTYSTATE=1     # Show * for unstaged changes, + for staged changes
+export GIT_PS1_SHOWSTASHSTATE=1     # Show $ when something is stashed
+export GIT_PS1_SHOWUNTRACKEDFILES=1 # Show % when there are untracked files
+export GIT_PS1_SHOWUPSTREAM="auto"  # Show < > = for behind/ahead/diverged from upstream
+export GIT_PS1_SHOWCOLORHINTS=1     # Enable colored hints for dirty state
+
+# Additional color customization options
+export GIT_PS1_DESCRIBE_STYLE="branch"  # Show branch name or describe output
+export GIT_PS1_HIDE_IF_PWD_IGNORED=1    # Hide git info in ignored directories
+
 if [ "`id -u`" -eq 0 ]; then # user is root
 	if [ "$SSH_TTY" != "" ]; then # we are SSH'd in
-		PS1="${WHITE_B}[${WHITE}${SSH_WORD}${WHITE_B}!${RED}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${RED}#${CLEAR} "
+		PS1="${WHITE_B}[${WHITE}${SSH_WORD}${WHITE_B}!${RED}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${RED}#${CLEAR} "
 	elif [ "$SSH_TTY" = "" ] && [ "$IS_PTY" -eq 1 ]; then # terminal is a pty
-		PS1="${WHITE_B}[${RED}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${RED}#${CLEAR} "
+		PS1="${WHITE_B}[${RED}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${RED}#${CLEAR} "
 	else # likely a standard virtual terminal or a serial terminal
-		PS1="${WHITE_B}[${WHITE}${TTY}${WHITE_B}!${RED}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${RED}#${CLEAR} "
+		PS1="${WHITE_B}[${WHITE}${TTY}${WHITE_B}!${RED}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${RED}#${CLEAR} "
 	fi
 else # user is not root
 	if [ "$SSH_TTY" != "" ]; then # we are SSH'd in
-		PS1="${WHITE_B}[${WHITE}${SSH_WORD}${WHITE_B}!${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${CYAN}\$${CLEAR} "
+		PS1="${WHITE_B}[${WHITE}${SSH_WORD}${WHITE_B}!${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${CYAN}\$${CLEAR} "
 	elif [ "$SSH_TTY" = "" ] && [ "$IS_PTY" -eq 1 ]; then # terminal is a pty
-		PS1="${WHITE_B}[${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${CYAN}\$${CLEAR} "
+		PS1="${WHITE_B}[${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${CYAN}\$${CLEAR} "
 	else # likely a standard virtual terminal or a serial terminal
-		PS1="${WHITE_B}[${WHITE}${TTY}${WHITE_B}!${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${CYAN}\$${CLEAR} "
+		PS1="${WHITE_B}[${WHITE}${TTY}${WHITE_B}!${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${CYAN}\$${CLEAR} "
 	fi
 fi
