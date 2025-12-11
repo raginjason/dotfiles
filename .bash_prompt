@@ -69,6 +69,3 @@ else # user is not root
 		PS1="${WHITE_B}[${WHITE}${TTY}${WHITE_B}!${CYAN}\u${WHITE_B}@${CLEAR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W${WHITE_B}]${CYAN}\$${CLEAR} "
 	fi
 fi
-
-export PROMPT_COMMAND='pwd'
-echo $PS1

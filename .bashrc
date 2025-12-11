@@ -19,8 +19,12 @@ esac
 HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S %z "
 
 export GREP_OPTIONS='--color=auto'
-PS1="$(~/.bash_prompt) "
-export PS1
+
+# Source the bash prompt configuration instead of using a subshell
+if [ -f "${HOME}/.bash_prompt" ]; then
+    source "${HOME}/.bash_prompt"
+    export PS1
+fi
 
 if [ -e '/usr/local/scala-2.11.12/bin' ]; then
   export PATH="${PATH}":'/usr/local/scala-2.11.12/bin'
