@@ -63,11 +63,11 @@ case "${OSTYPE}" in
 esac
 
 # Configure git prompt options (optional)
-export GIT_PS1_SHOWDIRTYSTATE=1     # Show * for unstaged changes, + for staged changes
-export GIT_PS1_SHOWSTASHSTATE=1     # Show $ when something is stashed
-export GIT_PS1_SHOWUNTRACKEDFILES=1 # Show % when there are untracked files
-export GIT_PS1_SHOWUPSTREAM="auto"  # Show < > = for behind/ahead/diverged from upstream
-export GIT_PS1_SHOWCOLORHINTS=1     # Enable colored hints for dirty state
+export GIT_PS1_SHOWDIRTYSTATE=""     # Show * for unstaged changes, + for staged changes
+export GIT_PS1_SHOWSTASHSTATE=1      # Show $ when something is stashed
+export GIT_PS1_SHOWUNTRACKEDFILES="" # Show % when there are untracked files
+export GIT_PS1_SHOWUPSTREAM=""       # Show < > = for behind/ahead/diverged from upstream
+export GIT_PS1_SHOWCOLORHINTS=1      # Enable colored hints for dirty state
 
 # Additional color customization options
 export GIT_PS1_DESCRIBE_STYLE="branch"  # Show branch name or describe output
