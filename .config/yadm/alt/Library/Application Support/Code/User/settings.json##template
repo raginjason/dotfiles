@@ -13,7 +13,8 @@
         "ghcr.io/raginjason/features/yadm": {
             "repositoryUrl": "https://github.com/raginjason/dotfiles.git",
             "localClass": "{{ yadm.class }}",
-            "overwriteExisting": true
+            "overwriteExisting": true,
+            "decryptOnClone": true
         }
     }
 }
