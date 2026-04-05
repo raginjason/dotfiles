@@ -9,7 +9,12 @@
         }
     },
     "dev.containers.copyGitConfig": false,
+    "dev.containers.containerEnv": {
+        "NODE_OPTIONS": "--dns-result-order=ipv4first"
+    },
     "dev.containers.defaultFeatures": {
+        "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+        "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/raginjason/features/yadm": {
             "repositoryUrl": "https://github.com/raginjason/dotfiles.git",
             "localClass": "{{ yadm.class }}",
