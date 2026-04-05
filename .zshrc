@@ -36,3 +36,9 @@ fi
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/jwalker/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# OpenClaw Completion
+if [ -e "${HOME}"/.openclaw/completions/openclaw.zsh ]
+then
+  source "${HOME}"/.openclaw/completions/openclaw.zsh
+fi
