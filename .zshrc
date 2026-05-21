@@ -13,8 +13,6 @@ export LSCOLORS='Exfxcxdxbxegedabagacad'
 
 export GREP_OPTIONS='--color=auto'
 
-export EDITOR='vim'
-
 # Homebrew completion; assumes `brew completions link` already ran
 if type brew &>/dev/null
 then
@@ -43,16 +41,6 @@ unset _wb _r _uc
 
 # https://granted.dev
 alias assume="source assume"
-
-if [ -e "${HOME}"/.rd/bin ]
-then
-  export PATH="${HOME}"/.rd/bin:"${PATH}"
-fi
-
-if [ -e "${HOME}"/.local/bin ]
-then
-  export PATH="${HOME}"/.local/bin:"${PATH}"
-fi
 
 # OpenClaw Completion
 if [ -e "${HOME}"/.openclaw/completions/openclaw.zsh ]
