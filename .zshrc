@@ -27,6 +27,20 @@ fi
 # vi mode
 bindkey -v
 
+# Prompt
+autoload -U colors && colors
+_PS1_HOST="mbp"
+_wb="%B%F{white}"
+_r="%b%f"
+_uc="%F{cyan}"
+(( EUID == 0 )) && _uc="%F{red}"
+if [[ -n "$SSH_TTY" ]]; then
+  PROMPT="${_wb}[%F{white}ssh${_wb}!${_uc}%n${_wb}@${_r}${_PS1_HOST}${_wb}:%1~${_wb}]${_uc}%#${_r} "
+else
+  PROMPT="${_wb}[${_uc}%n${_wb}@${_r}${_PS1_HOST}${_wb}:%1~${_wb}]${_uc}%#${_r} "
+fi
+unset _wb _r _uc
+
 # https://granted.dev
 alias assume="source assume"
 
