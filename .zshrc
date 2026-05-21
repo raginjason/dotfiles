@@ -1,4 +1,6 @@
-# For interactive shells: aliases, functions, options, key bindings, etc.
+# Loaded for interactive shells (login and non-login).
+# Use for: aliases, functions, prompt, key bindings, completions.
+# Avoid: anything only needed at login (use .zprofile).
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
