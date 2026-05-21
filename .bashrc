@@ -1,7 +1,5 @@
 # OSX considers all terminals login shells
 
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 case "${OSTYPE}" in
   darwin*)
     # OSX/BSD/Darwin color ls

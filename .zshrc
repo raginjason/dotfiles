@@ -2,8 +2,6 @@
 # Use for: aliases, functions, prompt, key bindings, completions.
 # Avoid: anything only needed at login (use .zprofile).
 
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 # OSX/BSD color ls
 export CLICOLOR=1
 
