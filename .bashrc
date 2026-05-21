@@ -81,6 +81,7 @@ then
   export PATH="${HOME}"/.rd/bin:"${PATH}"
 fi
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/jwalker/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+if [ -e "${HOME}"/.local/bin ]
+then
+  export PATH="${HOME}"/.local/bin:"${PATH}"
+fi
