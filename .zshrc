@@ -2,12 +2,19 @@
 # Use for: aliases, functions, prompt, key bindings, completions.
 # Avoid: anything only needed at login (use .zprofile).
 
-# OSX/BSD color ls
-export CLICOLOR=1
+case "${OSTYPE}" in
+  darwin*)
+    # OSX/BSD color ls
+    export CLICOLOR=1
 
-# Default OSX/BSD colors are exfxcxdxbxegedabagacad
-# Change dirs to bold cyan so they show better on dark backgrounds
-export LSCOLORS='Exfxcxdxbxegedabagacad'
+    # Default OSX/BSD colors are exfxcxdxbxegedabagacad
+    # Change dirs to bold cyan so they show better on dark backgrounds
+    export LSCOLORS='Exfxcxdxbxegedabagacad'
+    ;;
+  linux*)
+    alias ls='ls --color=auto'
+    ;;
+esac
 
 export GREP_OPTIONS='--color=auto'
 
