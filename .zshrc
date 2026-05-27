@@ -37,7 +37,11 @@ setopt PROMPT_SUBST
 zstyle ':vcs_info:git:*' formats ' %F{yellow}(%b)%f'
 add-zsh-hook precmd vcs_info
 
-_PS1_HOST="mbp"
+if [[ -n "$REMOTE_CONTAINERS" ]]; then
+  _PS1_HOST="dvc"
+else
+  _PS1_HOST="mbp"
+fi
 _wb="%B%F{white}"
 _r="%b%f"
 _uc="%F{cyan}"

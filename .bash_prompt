@@ -45,7 +45,11 @@ TTY=$(/usr/bin/basename $(/usr/bin/tty))
 SSH_WORD="${YELLOW_B}ssh"
 
 #PS1_HOSTNAME=${HOSTNAME}
-PS1_HOSTNAME="mbp"
+if [ -n "$REMOTE_CONTAINERS" ]; then
+  PS1_HOSTNAME="dvc"
+else
+  PS1_HOSTNAME="mbp"
+fi
 
 PS1_PWD=$(pwd)
 
