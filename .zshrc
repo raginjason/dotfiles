@@ -37,21 +37,22 @@ setopt PROMPT_SUBST
 zstyle ':vcs_info:git:*' formats ' %F{yellow}(%b)%f'
 add-zsh-hook precmd vcs_info
 
-if [[ -n "$REMOTE_CONTAINERS" ]]; then
-  _PS1_HOST="dvc"
-else
-  _PS1_HOST="mbp"
-fi
 _wb="%B%F{white}"
 _r="%b%f"
 _uc="%F{cyan}"
 (( EUID == 0 )) && _uc="%F{red}"
-if [[ -n "$SSH_TTY" ]]; then
-  PROMPT="${_wb}[%F{white}ssh${_wb}!${_uc}%n${_wb}@${_r}${_PS1_HOST}${_wb}:%1~\${vcs_info_msg_0_}${_wb}]${_uc}%#${_r} "
+if [[ -n "$REMOTE_CONTAINERS" ]]; then
+  _PS1_HOST="devc"
+  _hc="%B%F{green}"
+elif [[ -n "$SSH_TTY" ]]; then
+  _PS1_HOST="mbp"
+  _hc="%B%F{yellow}"
 else
-  PROMPT="${_wb}[${_uc}%n${_wb}@${_r}${_PS1_HOST}${_wb}:%1~\${vcs_info_msg_0_}${_wb}]${_uc}%#${_r} "
+  _PS1_HOST="mbp"
+  _hc="${_r}"
 fi
-unset _wb _r _uc
+PROMPT="${_wb}[${_uc}%n${_wb}@${_hc}${_PS1_HOST}${_wb}:%1~\${vcs_info_msg_0_}${_wb}]${_uc}%#${_r} "
+unset _wb _r _uc _hc
 
 # https://granted.dev
 alias assume="source assume"
