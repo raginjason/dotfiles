@@ -41,8 +41,8 @@ _wb="%B%F{white}"
 _r="%b%f"
 _uc="%F{cyan}"
 (( EUID == 0 )) && _uc="%F{red}"
-if [[ -n "$REMOTE_CONTAINERS" ]]; then
-  _PS1_HOST="devc"
+if [[ -f /.dockerenv ]]; then
+  _PS1_HOST="container"
   _hc="%B%F{green}"
 elif [[ -n "$SSH_TTY" ]]; then
   _PS1_HOST="mbp"

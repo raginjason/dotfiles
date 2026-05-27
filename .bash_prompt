@@ -44,8 +44,8 @@ fi
 TTY=$(/usr/bin/basename $(/usr/bin/tty))
 
 #PS1_HOSTNAME=${HOSTNAME}
-if [ -n "$REMOTE_CONTAINERS" ]; then
-  PS1_HOSTNAME="devc"
+if [ -f /.dockerenv ]; then
+  PS1_HOSTNAME="container"
   PS1_HOSTNAME_COLOR="${GREEN_B}"
 elif [ -n "$SSH_TTY" ]; then
   PS1_HOSTNAME="mbp"
