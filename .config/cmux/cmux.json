@@ -98,16 +98,16 @@
   //     "lightModeTintColor" : null
   //   },
 
-  //   "automation" : {
+     "automation" : {
   //     "socketControlMode" : "cmuxOnly",
   //     "portRange" : 10,
   //     "socketPassword" : "",
   //     "claudeBinaryPath" : "",
   //     "geminiIntegration" : true,
   //     "portBase" : 9100,
-  //     "claudeCodeIntegration" : true,
+       "claudeCodeIntegration" : true,
   //     "cursorIntegration" : true
-  //   },
+     },
 
   //   "browser" : {
   //     "hostsToOpenInEmbeddedBrowser" : [
