@@ -2,5 +2,4 @@
 
 for script in "$HOME/.config/yadm/bootstrap.d/"*.sh; do
   [ -x "$script" ] && "$script"
-  [ -x /usr/libexec/path_helper ] && eval "$(/usr/libexec/path_helper -s)"
 done

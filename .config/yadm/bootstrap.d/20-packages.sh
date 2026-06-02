@@ -13,6 +13,8 @@ defaults write com.googlecode.iterm2 "Default Bookmark Guid" "A1B2C3D4-E5F6-7890
 # Set Terminal.app's Basic profile font; font name is PostScript name, not family name
 osascript -e 'tell application "Terminal" to set font name of settings set "Basic" to "MesloLGSNFM-Regular"'
 
+eval "$(/usr/libexec/path_helper -s)"
+
 case "$YADM_CLASS" in
   personal)
     brew install --cask discord
