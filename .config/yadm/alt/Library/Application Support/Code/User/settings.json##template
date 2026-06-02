@@ -25,5 +25,7 @@
             "decryptOnClone": true
         }
     },
-    "redhat.telemetry.enabled": "false"
+    "redhat.telemetry.enabled": "false",
+    "editor.fontFamily": "MesloLGS Nerd Font Mono",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono"
 }
