@@ -24,6 +24,8 @@ if [ -f "${HOME}/.bash_prompt" ]; then
     export PS1
 fi
 
+eval "$(starship init bash)"
+
 if [ -e '/usr/local/scala-2.11.12/bin' ]; then
   export PATH="${PATH}":'/usr/local/scala-2.11.12/bin'
 fi

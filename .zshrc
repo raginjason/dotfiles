@@ -58,6 +58,8 @@ else
 fi
 unset _wb _r _uc _hc
 
+eval "$(starship init zsh)"
+
 # https://granted.dev
 alias assume="source assume"
 
