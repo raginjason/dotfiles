@@ -22,7 +22,8 @@
             "repositoryUrl": "https://github.com/raginjason/dotfiles.git",
             "localClass": "{{ yadm.class }}",
             "overwriteExisting": true,
-            "decryptOnClone": true
+            "decrypt": true,
+            "bootstrap": true
         }
     },
     "redhat.telemetry.enabled": "false",
