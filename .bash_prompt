@@ -81,7 +81,9 @@ export GIT_PS1_SHOWCOLORHINTS=1      # Enable colored hints for dirty state
 export GIT_PS1_DESCRIBE_STYLE="branch"  # Show branch name or describe output
 export GIT_PS1_HIDE_IF_PWD_IGNORED=1    # Hide git info in ignored directories
 
-if [ "`id -u`" -eq 0 ]; then # user is root
+if [ -n "$CLAUDECODE" ]; then
+  PS1='\W \$ '
+elif [ "`id -u`" -eq 0 ]; then # user is root
 	if [ -n "$SSH_TTY" ] || [ "$IS_PTY" -eq 1 ]; then
 		PS1="${WHITE_B}[${RED}\u${WHITE_B}@${PS1_HOSTNAME_COLOR}${PS1_HOSTNAME}${WHITE_B}:${CLEAR}\W\$(__git_ps1 ' (%s) ')${WHITE_B}]${RED}#${CLEAR} "
 	else # likely a standard virtual terminal or a serial terminal

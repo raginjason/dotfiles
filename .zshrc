@@ -51,7 +51,11 @@ else
   _PS1_HOST="mbp"
   _hc="${_r}"
 fi
-PROMPT="${_wb}[${_uc}%n${_wb}@${_hc}${_PS1_HOST}${_wb}:%1~\${vcs_info_msg_0_}${_wb}]${_uc}%#${_r} "
+if [[ -n "$CLAUDECODE" ]]; then
+  PROMPT='%1~ %# '
+else
+  PROMPT="${_wb}[${_uc}%n${_wb}@${_hc}${_PS1_HOST}${_wb}:%1~\${vcs_info_msg_0_}${_wb}]${_uc}%#${_r} "
+fi
 unset _wb _r _uc _hc
 
 # https://granted.dev
