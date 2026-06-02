@@ -3,6 +3,7 @@
 [ "$YADM_OS" = "Darwin" ] || exit 0
 
 brew install cmux
+brew install starship
 
 brew install --cask visual-studio-code
 brew install --cask claude
