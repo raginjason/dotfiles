@@ -16,7 +16,7 @@
 
 ## Writing Style
 
-When writing any prose — comments, docs, commit messages, READMEs, error messages, UI copy — follow these rules:
+When writing any prose such as: comments, docs, commit messages, READMEs, error messages, UI copy, Jira tickets, or Confluence pages, follow these rules:
 
 **Forbidden words and phrases:**
 - delve, tapestry, unleash, leverage (as a verb), robust, seamless, streamline
@@ -26,6 +26,7 @@ When writing any prose — comments, docs, commit messages, READMEs, error messa
 - Any sentence that restates what the next sentence already says
 
 **Style rules:**
+- Be terse
 - No em-dash padding (— used to add fake drama)
 - No bullet points that could just be a sentence
 - No "This function does X. It also does Y." — just say what it does once
