@@ -2,5 +2,9 @@
   "permissions": {
     "skipDangerousModePermissionPrompt": true
   },
-  "remoteControlAtStartup": true
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "remoteControlAtStartup": true,
+  "model": "sonnet"
 }
