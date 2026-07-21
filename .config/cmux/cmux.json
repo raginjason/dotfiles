@@ -109,14 +109,14 @@
   //     "cursorIntegration" : true
      },
 
-  //   "browser" : {
+     "browser" : {
   //     "hostsToOpenInEmbeddedBrowser" : [
   // 
   //     ],
   //     "showImportHintOnBlankTabs" : true,
   //     "showSearchSuggestions" : true,
   //     "reactGrabVersion" : "0.1.29",
-  //     "openTerminalLinksInCmuxBrowser" : true,
+       "openTerminalLinksInCmuxBrowser" : false,
   //     "theme" : "system",
   //     "urlsToAlwaysOpenExternally" : [
   // 
@@ -131,7 +131,7 @@
   //     ],
   //     "interceptTerminalOpenCommandInCmuxBrowser" : true,
   //     "defaultSearchEngine" : "google"
-  //   },
+     },
 
   //   "shortcuts" : {
   //     "bindings" : {
