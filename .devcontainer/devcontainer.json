@@ -1,0 +1,8 @@
+{
+    "features": {
+        "ghcr.io/raginjason/features/yadm:1": {
+            "repositoryUrl": "https://github.com/raginjason/dotfiles.git"
+        },
+        "ghcr.io/guiyomh/features/starship:0": {}
+    }
+}
