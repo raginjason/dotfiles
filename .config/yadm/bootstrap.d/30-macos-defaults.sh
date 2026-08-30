@@ -11,6 +11,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 launchctl bootstrap gui/$UID ~/Library/LaunchAgents/com.local.capslock2escape.plist 2>/dev/null || true
 
+# Never sleep when on AC power
+sudo pmset -c sleep 0
+
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
