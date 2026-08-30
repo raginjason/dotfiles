@@ -20,8 +20,10 @@ In reality, the first option is likely the best place to start, as most or all o
 
 Setup environment in a new computer
 
+The `local.class` controls which optional packages and settings get applied. The example below uses `personal`; other classes may be available.
+
 ```
-git clone https://github.com/raginjason/dotfiles.git
-cd dotfiles
-./bootstrap-personal.sh # Or any other ./bootstrap-<machine role>.sh
+yadm clone --no-bootstrap https://github.com/raginjason/dotfiles.git
+yadm config local.class personal
+yadm bootstrap
 ```
