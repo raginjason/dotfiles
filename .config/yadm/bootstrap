@@ -1,5 +1,8 @@
 #!/bin/sh
 
+export YADM_OS="$(uname -s)"
+export YADM_CLASS="$(yadm config local.class 2>/dev/null)"
+
 for script in "$HOME/.config/yadm/bootstrap.d/"*.sh; do
   [ -x "$script" ] && "$script"
 done
